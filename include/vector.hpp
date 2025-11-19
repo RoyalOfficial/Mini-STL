@@ -1,7 +1,10 @@
 // vector.hpp
 #pragma once 
 #include <cstddef>
-
+/**
+ * Custom implementation of vector.hpp
+ * Author: Pietro Paniccia
+ */
 namespace mini_stl {
 
 template<typename T>
