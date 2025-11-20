@@ -29,7 +29,7 @@ int main(int argc, char* argv[]) {
         vec2.push_back(y);
      }
 
-     std::cout << "Choose operation 1=Addition, 2:Dot Product";
+     std::cout << "Choose operation 1:Addition, 2:Dot Product";
      int choice;
      std::cin >> choice;
 
@@ -40,7 +40,10 @@ int main(int argc, char* argv[]) {
             sum = vec1.add(vec2);
             std::cout << "Sum: <";
             for (int i = 0; i < n; ++i){
-                std::cout << sum[i] << ", ";
+                if (i+1 == n)
+                    std::cout << sum[i] << "";
+                else 
+                    std::cout << sum[i] << ", ";
             }
             std::cout << ">\n";
             break;
@@ -50,6 +53,7 @@ int main(int argc, char* argv[]) {
             double result = 0;
             result = vec1.dot(vec2);
             std::cout << "Dot Product: " << result << "\n";
+            break;
         }
 
         default:

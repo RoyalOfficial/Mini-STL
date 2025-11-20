@@ -89,14 +89,15 @@ public:
     void pop_back() {
         if (sz > 0){
             sz--;
-            data[sz].~T();
+            //data[sz].~T();
         }
     };
     void clear(){
-        while (sz != 0){
-            sz --;
-            data[sz].~T();
-        }
+        sz = 0;
+        // while (sz != 0){
+        //     sz --;
+        //     data[sz].~T();
+        // }
     };
     void reserve(size_t newCap){
         if (newCap > cap){
@@ -146,5 +147,6 @@ public:
             throw std::runtime_error("Vector sizes do not match for vector addition");
         }
     }
+
 };
 } // namespace mini_stl
